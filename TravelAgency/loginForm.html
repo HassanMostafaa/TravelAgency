@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>TravelAgency</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  </head>
+
+  <body id="home" class="scrollspy">
+    <div class="navbar-fixed">
+        <nav class="teal">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="" class="brand-logo">TravelAgency</a>
+                    <a href="" data-target="mobile-nav" class="sidenav-trigger">
+                        <i class="material-icons">menu</i>
+                    </a>
+
+
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                                <a href="index.html">Search</a>
+                        </li>
+                        <li>
+                                <a href="index.html">Gallery</a>
+                        </li>
+                        <li>
+                                <a href="index.html">Contact</a>
+                        </li>
+                        
+                    </ul>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <ul class="sidenav" id="mobile-nav">
+        <H4>TravelAgency</H4>
+            <li>
+                <a href="#home">Home</a>
+            </li>
+            <li>
+                    <a href="#search">Search</a>
+            </li>
+            <li>
+                    <a href="#gallery">Gallery</a>
+            </li>
+            <li>
+                    <a href="#contact">Contact</a>
+            </li>
+            <li>
+                    <a href="#">LogIn</a>
+            </li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="styleFrom.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="login-reg-panel">
+		<div class="login-info-box">
+			<h2>Have an account?</h2>
+			<p>Lorem ipsum dolor sit amet</p>
+			<label id="label-register" for="log-reg-show">Login</label>
+			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+		</div>
+							
+		<div class="register-info-box">
+			<h2 class="h2">Please, Login For Booking</h2><br><br>
+			<H5>Don't Have an Account?</H5>
+			<label id="label-login" for="log-login-show">Register Now</label>
+			<input type="radio" name="active-log-panel" id="log-login-show">
+		</div>
+							
+		<div class="white-panel">
+			<div class="login-show">
+				<h2>LOGIN</h2>
+				<input type="text" placeholder="Email">
+				<input type="password" placeholder="Password">
+				<input type="button" value="Login">
+				<a class="forget" href="">Forgot password?</a>
+			</div>
+			<div class="register-show">
+				<h2>REGISTER</h2>
+				<input type="text" placeholder="Email">
+				<input type="password" placeholder="Password">
+				<input type="password" placeholder="Confirm Password">
+				<input type="button" value="Register">
+			</div>
+		</div>
+    </div>
+
+
+    <footer class=" teal dareken-2 center">
+        <p>TravelAgency &copy 2019 By Hassam Mostafa </p>
+    </footer>
+    
+        <!--JavaScript at end of body for optimized loading-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+       
+        
+        <script>
+            //sidenav
+        const sideNav = document.querySelector('.sidenav');
+        M.Sidenav.init(sideNav,{});
+    
+    
+        
+    
+    //slider
+       const slider = document.querySelector('.slider');
+       M.Slider.init(slider, {
+           indicators: true,
+           height: 500,
+           transistion: 500,
+           interval: 6000
+       });
+    
+        
+        //autocomp
+    
+        const ac = document.querySelector('.autocomplete');
+        M.Autocomplete.init(ac,{
+            data:{
+                "India":null,
+                "Asia":null,
+                "Russia":null,
+                "America":null,
+                "Aruba":null,
+                "France":null,
+                "Germany":null,
+                "Greece":null,
+                "Cancun":null,
+                "Hawaii":null,
+                "Florida":null,
+                "Carlifornia":null,
+                "Jamacia":null,
+                "Europe":null,
+                "Egypt (Not Recommended)":null,
+                "Canada":null,
+    
+            }
+        })
+    
+    
+        //material boxed
+        const mb = document.querySelectorAll('.materialboxed');
+        M.Materialbox.init(mb,{});
+        
+
+
+
+
+    
+    
+    $(document).ready(function(){
+    $('.login-info-box').fadeOut();
+    $('.login-show').addClass('show-log-panel');
+});
+
+
+$('.login-reg-panel input[type="radio"]').on('change', function() {
+    if($('#log-login-show').is(':checked')) {
+        $('.register-info-box').fadeOut(); 
+        $('.login-info-box').fadeIn();
+        
+        $('.white-panel').addClass('right-log');
+        $('.register-show').addClass('show-log-panel');
+        $('.login-show').removeClass('show-log-panel');
+        
+    }
+    else if($('#log-reg-show').is(':checked')) {
+        $('.register-info-box').fadeIn();
+        $('.login-info-box').fadeOut();
+        
+        $('.white-panel').removeClass('right-log');
+        
+        $('.login-show').addClass('show-log-panel');
+        $('.register-show').removeClass('show-log-panel');
+    }
+});
+  
+</script>
